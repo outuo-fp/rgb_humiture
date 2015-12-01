@@ -179,14 +179,14 @@
                 $("#tempid").text(tempval+"℃");
                 // 显示湿度
                 $("#humiid").text(msgjson.dht11_humidity+'%');
-                // 温度超过29则红灯亮，20-29之间则绿灯亮，低于20黄灯亮
-                if(tempval > "29"){
+                // 温度超过24则红灯亮，21-24之间则绿灯亮，低于22黄灯亮
+                if(tempval > "24"){
                     led_red();
                     $("#rgbimgid").attr("src", "./image/02-red.svg");
-                }else if(tempval < "30" && (tempval > "19")){
+                }else if(tempval < "25" && (tempval > "21")){
                     led_green();
                     $("#rgbimgid").attr("src", "./image/02-green.svg");
-                }else if(tempval < "20"){
+                }else if(tempval < "22"){
                     led_yellow();
                     $("#rgbimgid").attr("src", "./image/02-yellow.svg");
                 }
